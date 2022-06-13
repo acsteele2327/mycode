@@ -14,7 +14,7 @@ from random import randint
 from gamecontent import rooms
 
 #3spooky5me print lol
-def print1by1(text, delay=0.1):
+def print1by1(text, delay=0.05):
     for c in text:
         sys.stdout.write(c)
         sys.stdout.flush()
@@ -51,12 +51,12 @@ def decision():
     print1by1('You took too long to run...\nThe Dark Figure envelops you...\nYOU DIED\n')
     os._exit(os.EX_OK) #will force quit the program
 
-S = threading.Timer(5.0, decision)
+S = threading.Timer(5.0, decision) #5 seconds to input or prints decision func
 
 
 def escape():
     #random chance to escape if run command is input by player when in the boiler room with dark figure
-    S.start() #starts the countdown timer to input the run command
+    S.start() #starts the countdown timer to input the run command you have 5 seconds
     while True:
         print('You must escape!\n')
         move = ''
@@ -67,12 +67,12 @@ def escape():
             S.cancel() #cancels the countdown timer after run command is input
             escape_chance= randint(1,10) #random int to determine if you will escape or not
 
-            if escape_chance >= 5:
+            if escape_chance >= 5: # about 50% chance to successfully run
                 print("You managed to leave before the Dark Figure enveloped you.\n")
                 currentRoom = 'Hall'
                 break
 
-            if escape_chance < 5:
+            if escape_chance < 5: # about %50 chance to be killed by dark figure
                 print1by1('The Dark Figure envelops you and your existence fades away...\nYOU DIED\n')
                 sys.exit()
             
@@ -127,7 +127,7 @@ while True:
         else:
             print('You can\'t go that way!')
 
-    if move[0] == 'run' and rooms[currentRoom] != 'Boiler Room':
+    if move[0] == 'run' and rooms[currentRoom] != 'Boiler Room': #can only use the run command with in the boiler room with the dark figure
         print('You can\'t run in here!')
 
     #if they type 'get' first
@@ -165,10 +165,10 @@ while True:
         print1by1('The Dark Figure envelops you and your existence fades away...\nYOU DIED\n')
         break
 
-    elif move[0] == 'help':
+    elif move[0] == 'help': #help command for user input shows instructions again
         showInstructions()
 
-    elif move[0] in ['q', 'quit']:
+    elif move[0] in ['q', 'quit']: #quit command prompts the user to input y or n to exit script
         print("Are you sure you want to quit? Yes/No")
         quit_query = input('>')
         if quit_query.lower() in ['y', 'yes']:
