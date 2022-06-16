@@ -1,7 +1,6 @@
 #! /usr/bin/env python3
 """ ASCII Art Museum project by Aaron Steele | view a number of ascii art from an interface"""
 
-#imports
 import sys
 import time
 import threading
@@ -55,7 +54,7 @@ def print_ascii(fn):
     f=open(fn,'r')
     print(''.join([line for line in f]))
 
-#Intro func will go here introducing the setting
+#Intro func introducing the setting
 def intro():
     os.system('clear') # start game with a fresh screen
     (print_ascii("entrance.txt")) #display picture of museum entrance
@@ -99,6 +98,7 @@ def main():
         menu_interface()
         main_input = input("\n>").lower()
 
+        #go to the north wing
         if main_input == "north" or main_input == "north wing":
             os.system('clear')
             print("Welcome to the North Wing")
@@ -106,9 +106,10 @@ def main():
             time.sleep(2.0)
 
             os.system('clear') # start game with a fresh screen
-            print_ascii(art[0]["north"][random.randint(1,2)])
+            print_ascii(art[0]["north"][random.randint(1,2)]) #slice random ascii art from imported art dictionary
             gaze()
         
+        # go to the west wing   
         elif main_input == "west" or main_input == "west wing":
             os.system('clear')
             print("Welcome to the West Wing")
@@ -119,6 +120,7 @@ def main():
             print_ascii("chad.txt")
             gaze()
 
+        #go to the south wing
         elif main_input == "south" or main_input == "south wing":
             os.system('clear')
             print("Welcome to the South Wing")
@@ -129,6 +131,7 @@ def main():
             print_ascii("dripgoku.txt")
             gaze()
 
+        #go to the east wing
         elif main_input == "east" or main_input == "east wing":
             os.system('clear')
             print("Welcome to the East Wing")
@@ -136,7 +139,7 @@ def main():
             time.sleep(2.0)
 
             os.system('clear') # start game with a fresh screen
-            print_ascii(art[1]["east"][random.randint(1,2)])
+            print_ascii(art[1]["east"][random.randint(1,2)]) #slice random ascii art from imported art dictionary
             gaze()
 
         #quit feature using the leave func
@@ -151,7 +154,7 @@ def main():
         else:
             os.system('clear') # start game with a fresh screen
             print("Please enter a valid input")
-            time.sleep(1.0)
+            time.sleep(0.8)
 
         
 
