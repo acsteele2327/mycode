@@ -42,8 +42,16 @@ def print_ascii(fn):
 
 #testing out print func
 #print_ascii('feelsokayman.txt')
-#print_ascii('uknow.txt')
 
+#leave func to exit program after user input
+def leave():
+    print("Are you sure you want to quit? Yes/No")
+    quit_query = input('>')
+    if quit_query.lower() in ['y', 'yes']:
+            print("We hope you enjoyed your stay at the ASCII Museum!\nExiting...\n")
+            sys.exit()
+    else:
+        pass
 
 
 #Interface function
@@ -105,6 +113,9 @@ def main():
             os.system('clear') # start game with a fresh screen
             print_ascii("gotem.txt")
             gaze()
+
+        elif main_input == "quit" or main_input == "q":
+            leave()
 
         
 
