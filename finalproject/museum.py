@@ -75,10 +75,12 @@ def main():
     intro()
 
     while True:
+        os.system('clear')
         menu_interface()
         main_input = input("\n>").lower()
 
         if main_input == "north" or main_input == "north wing":
+            os.system('clear')
             print("Welcome to the North Wing")
             print1by1("As you peruse the lovely halls of the museum you turn your head and look upon an art piece that speaks to you on a molecular level")
             time.sleep(2.0)
@@ -88,6 +90,7 @@ def main():
             gaze()
         
         elif main_input == "west" or main_input == "west wing":
+            os.system('clear')
             print("Welcome to the West Wing")
             print1by1("As you peruse the lovely halls of the museum you turn your head and look upon an art piece that speaks to you on a molecular level")
             time.sleep(2.0)
@@ -97,6 +100,7 @@ def main():
             gaze()
 
         elif main_input == "south" or main == "south wing":
+            os.system('clear')
             print("Welcome to the South Wing")
             print1by1("As you peruse the lovely halls of the museum you turn your head and look upon an art piece that speaks to you on a molecular level")
             time.sleep(2.0)
@@ -106,6 +110,7 @@ def main():
             gaze()
 
         elif main_input == "east" or main_input == "east wing":
+            os.system('clear')
             print("Welcome to the East Wing")
             print1by1("As you peruse the lovely halls of the museum you turn your head and look upon an art piece that speaks to you on a molecular level")
             time.sleep(2.0)
@@ -114,8 +119,15 @@ def main():
             print_ascii("gotem.txt")
             gaze()
 
+        #quit feature using the leave func
         elif main_input == "quit" or main_input == "q":
+            os.system('clear')
             leave()
+
+        else:
+            os.system('clear') # start game with a fresh screen
+            print("Please enter a valid input")
+            time.sleep(1.0)
 
         
 
