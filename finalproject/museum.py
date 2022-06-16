@@ -16,8 +16,23 @@ def print1by1(text, delay=0.04):
 
 
 #Help func will provide commands when called upon by help input also shown at the intro
-#def help():
-    
+def help():
+    os.system('clear')
+    print('''
+===============================
+    Commands:
+      -------------------
+      north or north wing
+      west or west wing
+      east or east wing
+      south or south wing
+      -------------------
+      help or h
+      quit or q  
+===============================
+
+''')
+    input("Press enter to return\n>")
 
 
 
@@ -39,7 +54,9 @@ def print_ascii(fn):
 #Intro func will go here introducing the setting
 def intro():
     os.system('clear') # start game with a fresh screen
-    (print_ascii("entrance.txt"))
+    (print_ascii("entrance.txt")) #display picture of museum entrance
+    input("Press enter to continue...\n>")
+
 
 #testing out print func
 #print_ascii('feelsokayman.txt')
@@ -75,7 +92,6 @@ def menu_interface():
 def main():
 
     intro()
-    time.sleep(2.0)
 
     while True:
         os.system('clear')
@@ -102,7 +118,7 @@ def main():
             print_ascii("chad.txt")
             gaze()
 
-        elif main_input == "south" or main == "south wing":
+        elif main_input == "south" or main_input == "south wing":
             os.system('clear')
             print("Welcome to the South Wing")
             print1by1("As you peruse the lovely halls of the museum you turn your head and look upon an art piece that speaks to you on a molecular level")
@@ -126,6 +142,10 @@ def main():
         elif main_input == "quit" or main_input == "q":
             os.system('clear')
             leave()
+
+        #help feature to display commands user can input
+        elif main_input == "help" or main_input == "h":
+            help()
 
         else:
             os.system('clear') # start game with a fresh screen
