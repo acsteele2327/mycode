@@ -6,6 +6,10 @@ import sys
 import time
 import threading
 import os
+import random
+
+#import dictionary for ascii art
+from wings import art
 
 #print1by1 func for dramatic effect
 def print1by1(text, delay=0.04):
@@ -58,9 +62,6 @@ def intro():
     input("Press enter to continue...\n>")
 
 
-#testing out print func
-#print_ascii('feelsokayman.txt')
-
 #leave func to exit program after user input
 def leave():
     print("Are you sure you want to quit? Yes/No")
@@ -105,7 +106,7 @@ def main():
             time.sleep(2.0)
 
             os.system('clear') # start game with a fresh screen
-            print_ascii("feelsokayman.txt")
+            print_ascii(art[0]["north"][random.randint(1,2)])
             gaze()
         
         elif main_input == "west" or main_input == "west wing":
@@ -135,7 +136,7 @@ def main():
             time.sleep(2.0)
 
             os.system('clear') # start game with a fresh screen
-            print_ascii("gotem.txt")
+            print_ascii(art[1]["east"][random.randint(1,2)])
             gaze()
 
         #quit feature using the leave func
