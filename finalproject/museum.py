@@ -14,10 +14,6 @@ def print1by1(text, delay=0.04):
         sys.stdout.flush()
         time.sleep(delay)
 
-#Intro func will go here introducing the setting
-def intro():
-    os.system('clear') # start game with a fresh screen
-
 
 #Help func will provide commands when called upon by help input also shown at the intro
 #def help():
@@ -40,6 +36,11 @@ def print_ascii(fn):
     f=open(fn,'r')
     print(''.join([line for line in f]))
 
+#Intro func will go here introducing the setting
+def intro():
+    os.system('clear') # start game with a fresh screen
+    (print_ascii("entrance.txt"))
+
 #testing out print func
 #print_ascii('feelsokayman.txt')
 
@@ -56,15 +57,16 @@ def leave():
 
 #Interface function
 def menu_interface():
-     print('''
-        ====================================================
-        Please enter the direction for the wing of the 
-        museum you would like to enter:
+    print_ascii("hallway.txt") #ascii picture of museum hall
+    print('''
+ ====================================================
+        Please enter the direction for the wing of 
+        the museum you would like to enter:
         ---->  North Wing
         ---->  West Wing
         ---->  South Wing
         ---->  East Wing
-        ====================================================
+ ====================================================
     
         ''')
         
@@ -73,6 +75,7 @@ def menu_interface():
 def main():
 
     intro()
+    time.sleep(2.0)
 
     while True:
         os.system('clear')
