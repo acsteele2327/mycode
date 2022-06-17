@@ -106,7 +106,7 @@ def main():
             time.sleep(2.0)
 
             os.system('clear') # start game with a fresh screen
-            print_ascii(art[0]["north"][random.randint(1,2)]) #slice random ascii art from imported art dictionary
+            print_ascii(art[0]["north"][random.randint(1,3)]) #slice random ascii art from imported art dictionary
             gaze()
         
         # go to the west wing   
@@ -117,7 +117,7 @@ def main():
             time.sleep(2.0)
 
             os.system('clear') # start game with a fresh screen
-            print_ascii("chad.txt")
+            print_ascii(art[2]["west"][random.randint(1,3)]) #slice random ascii art from imported art dictionary
             gaze()
 
         #go to the south wing
@@ -128,7 +128,7 @@ def main():
             time.sleep(2.0)
 
             os.system('clear') # start game with a fresh screen
-            print_ascii("dripgoku.txt")
+            print_ascii(art[3]["south"][random.randint(1,3)]) #slice random ascii art from imported art dictionary
             gaze()
 
         #go to the east wing
@@ -139,7 +139,7 @@ def main():
             time.sleep(2.0)
 
             os.system('clear') # start game with a fresh screen
-            print_ascii(art[1]["east"][random.randint(1,2)]) #slice random ascii art from imported art dictionary
+            print_ascii(art[1]["east"][random.randint(1,3)]) #slice random ascii art from imported art dictionary
             gaze()
 
         #quit feature using the leave func
@@ -154,7 +154,7 @@ def main():
         else:
             os.system('clear') # start game with a fresh screen
             print("Please enter a valid input")
-            time.sleep(0.8)
+            time.sleep(0.9)
 
         
 
