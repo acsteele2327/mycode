@@ -106,7 +106,7 @@ def main():
             time.sleep(2.0)
 
             os.system('clear') # start game with a fresh screen
-            print_ascii(art[0]["north"][random.randint(1,3)]) #slice random ascii art from imported art dictionary
+            print_ascii(art[0]["north"][random.randint(1,4)]) #slice random ascii art from imported art dictionary
             gaze()
         
         # go to the west wing   
@@ -139,7 +139,7 @@ def main():
             time.sleep(2.0)
 
             os.system('clear') # start game with a fresh screen
-            print_ascii(art[1]["east"][random.randint(1,3)]) #slice random ascii art from imported art dictionary
+            print_ascii(art[1]["east"][random.randint(1,4)]) #slice random ascii art from imported art dictionary
             gaze()
 
         #quit feature using the leave func

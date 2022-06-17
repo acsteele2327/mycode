@@ -3,14 +3,16 @@ art = [
             "north" : {
                 1 : "dripgoku.txt",
                 2 : "gotem.txt",
-                3 : "shinji.txt"
+                3 : "shinji.txt",
+                4 : "doge.txt"
                         }
         },
         {
            "east" : {
                 1 : "uknow.txt",
                 2 : "feelsokayman.txt",
-                3 : "thirdimpact.txt"
+                3 : "thirdimpact.txt",
+                4 : "tarnation.txt"
                     }
         },
         {
