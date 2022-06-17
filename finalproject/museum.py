@@ -101,7 +101,7 @@ def main():
         #go to the north wing
         if main_input == "north" or main_input == "north wing":
             os.system('clear')
-            print("Welcome to the North Wing")
+            print("Welcome to the North Wing\n\n")
             print1by1("As you peruse the lovely halls of the museum you turn your head and look upon an art piece that speaks to you on a molecular level")
             time.sleep(2.0)
 
@@ -112,7 +112,7 @@ def main():
         # go to the west wing   
         elif main_input == "west" or main_input == "west wing":
             os.system('clear')
-            print("Welcome to the West Wing")
+            print("Welcome to the West Wing\n\n")
             print1by1("As you peruse the lovely halls of the museum you turn your head and look upon an art piece that speaks to you on a molecular level")
             time.sleep(2.0)
 
@@ -123,7 +123,7 @@ def main():
         #go to the south wing
         elif main_input == "south" or main_input == "south wing":
             os.system('clear')
-            print("Welcome to the South Wing")
+            print("Welcome to the South Wing\n\n")
             print1by1("As you peruse the lovely halls of the museum you turn your head and look upon an art piece that speaks to you on a molecular level")
             time.sleep(2.0)
 
@@ -134,7 +134,7 @@ def main():
         #go to the east wing
         elif main_input == "east" or main_input == "east wing":
             os.system('clear')
-            print("Welcome to the East Wing")
+            print("Welcome to the East Wing\n\n")
             print1by1("As you peruse the lovely halls of the museum you turn your head and look upon an art piece that speaks to you on a molecular level")
             time.sleep(2.0)
 
